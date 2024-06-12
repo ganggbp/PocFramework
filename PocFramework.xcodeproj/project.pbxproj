@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		31645DBC2C1A08DD00BC5FFA /* PocFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 31645DBB2C1A08DD00BC5FFA /* PocFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31645DC32C1A09E000BC5FFA /* PocFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31645DC22C1A09E000BC5FFA /* PocFramework.swift */; };
+		31645DC52C1A0AA900BC5FFA /* PocFrameWorkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31645DC42C1A0AA900BC5FFA /* PocFrameWorkError.swift */; };
+		31645DC72C1A0AB400BC5FFA /* TodoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31645DC62C1A0AB400BC5FFA /* TodoEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		31645DB82C1A08DD00BC5FFA /* PocFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PocFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31645DBB2C1A08DD00BC5FFA /* PocFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PocFramework.h; sourceTree = "<group>"; };
+		31645DC22C1A09E000BC5FFA /* PocFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocFramework.swift; sourceTree = "<group>"; };
+		31645DC42C1A0AA900BC5FFA /* PocFrameWorkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocFrameWorkError.swift; sourceTree = "<group>"; };
+		31645DC62C1A0AB400BC5FFA /* TodoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,9 @@
 		31645DBA2C1A08DD00BC5FFA /* PocFramework */ = {
 			isa = PBXGroup;
 			children = (
+				31645DC22C1A09E000BC5FFA /* PocFramework.swift */,
+				31645DC42C1A0AA900BC5FFA /* PocFrameWorkError.swift */,
+				31645DC62C1A0AB400BC5FFA /* TodoEntity.swift */,
 				31645DBB2C1A08DD00BC5FFA /* PocFramework.h */,
 			);
 			path = PocFramework;
@@ -93,6 +102,7 @@
 				TargetAttributes = {
 					31645DB72C1A08DD00BC5FFA = {
 						CreatedOnToolsVersion = 15.1;
+						LastSwiftMigration = 1510;
 					};
 				};
 			};
@@ -129,6 +139,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31645DC72C1A0AB400BC5FFA /* TodoEntity.swift in Sources */,
+				31645DC52C1A0AA900BC5FFA /* PocFrameWorkError.swift in Sources */,
+				31645DC32C1A09E000BC5FFA /* PocFramework.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +276,7 @@
 		31645DC02C1A08DD00BC5FFA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -284,15 +298,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.devhome.PocFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		31645DC12C1A08DD00BC5FFA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -314,9 +333,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.devhome.PocFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
